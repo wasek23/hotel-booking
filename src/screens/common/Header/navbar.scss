@@ -1,0 +1,29 @@
+$primary1: #2f8f9d;
+$primary2: #3bacb6;
+$primary3: #82dbd8;
+$primary4: #b3e8e5;
+
+.navbar {
+	height: 50px;
+	background-color: $primary4;
+
+	.container {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	.logo {
+		height: 45px;
+
+		img {
+			width: auto;
+			height: 100%;
+			max-height: 100%;
+		}
+	}
+
+	.loginBtn {
+		margin-left: 20px;
+	}
+}

@@ -1,0 +1,38 @@
+$primary1: #2f8f9d;
+$primary2: #3bacb6;
+$primary3: #82dbd8;
+$primary4: #b3e8e5;
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+// Common
+.container {
+	max-width: 1140px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+
+.btnWhite,
+.btnPrimary {
+	font-weight: 600;
+	border: none;
+	border-radius: 3px;
+	outline: 0;
+	cursor: pointer;
+}
+
+.btnWhite {
+	color: $primary1;
+	background-color: #fff;
+	padding: 5px 10px;
+}
+
+.btnPrimary {
+	color: #fff;
+	background-color: $primary1;
+	padding: 12px 20px;
+}
