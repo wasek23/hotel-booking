@@ -1,0 +1,28 @@
+.featuredSection {
+	.container {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: 20px;
+	}
+
+	.featuredItem {
+		height: 250px;
+		position: relative;
+		overflow: hidden;
+		border-radius: 10px;
+		z-index: -1;
+
+		img {
+			width: 100%;
+			max-width: 100%;
+			object-fit: cover;
+		}
+
+		.featuredContent {
+			color: #fff;
+			position: absolute;
+			left: 20px;
+			bottom: 20px;
+		}
+	}
+}

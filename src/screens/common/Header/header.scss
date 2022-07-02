@@ -9,12 +9,15 @@ $primary4: #b3e8e5;
 	position: relative;
 	padding: 20px 0 100px 0;
 
+	&.listHeader {
+		padding: 20px 0;
+	}
+
 	// List
 	.list {
 		display: flex;
 		align-items: center;
 		gap: 40px;
-		margin-bottom: 50px;
 
 
 		.listItem {
@@ -35,6 +38,8 @@ $primary4: #b3e8e5;
 
 	// Content
 	.content {
+		margin-top: 50px;
+
 		.description {
 			margin: 20px 0;
 		}
@@ -70,9 +75,14 @@ $primary4: #b3e8e5;
 			.searchInput {
 				border: none;
 				outline: 0;
+
+				&::placeholder {
+					color: #555;
+				}
 			}
 
 			.searchText {
+				color: #555;
 				cursor: pointer;
 			}
 		}
@@ -81,6 +91,7 @@ $primary4: #b3e8e5;
 		.searchOptions {
 			position: absolute;
 			top: 100%;
+			z-index: 2;
 		}
 
 		.searchOptions {
