@@ -1,0 +1,58 @@
+$primary1: #2f8f9d;
+
+.featuredPropertySection {
+	padding: 25px;
+
+	h2 {
+		font-size: 20px;
+		margin-bottom: 20px;
+	}
+}
+
+.featuredProperties {
+	display: flex;
+	justify-content: space-between;
+	gap: 20px;
+
+	.featuredProperty {
+		flex: 1;
+		display: flex;
+		gap: 10px;
+		flex-direction: column;
+		overflow: hidden;
+
+		img {
+			height: 250px;
+			object-fit: cover;
+		}
+
+		.name {
+			font-weight: bold;
+			color: #333;
+		}
+
+		.city {
+			font-weight: 300;
+		}
+
+		.price {
+			font-weight: 500;
+		}
+
+		.rating {
+			button {
+				font-weight: bold;
+				color: #fff;
+				background-color: $primary1;
+				padding: 3px;
+				border: none;
+				outline: 0;
+				margin-right: 10px;
+			}
+
+			span {
+				font-size: 14px;
+			}
+		}
+	}
+}

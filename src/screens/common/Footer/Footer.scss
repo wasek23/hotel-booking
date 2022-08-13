@@ -1,0 +1,32 @@
+$primary1: #2f8f9d;
+
+.footer {
+	padding-top: 50px;
+
+	.container {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 50px;
+	}
+
+	.footerList {
+		flex: 1;
+		list-style-type: none;
+
+		li {
+			font-size: 12px;
+			color: $primary1;
+			margin-bottom: 10px;
+
+			a {
+				text-decoration: none;
+				color: $primary1;
+			}
+		}
+	}
+
+	.copyright {
+		font-size: 12px;
+		text-align: center;
+	}
+}

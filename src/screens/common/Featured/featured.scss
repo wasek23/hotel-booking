@@ -1,4 +1,6 @@
 .featuredSection {
+	margin-bottom: 25px;
+
 	.container {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
@@ -23,6 +25,14 @@
 			position: absolute;
 			left: 20px;
 			bottom: 20px;
+
+			h3 {
+				font-size: 28px;
+			}
+
+			h4 {
+				font-size: 20px;
+			}
 		}
 	}
 }

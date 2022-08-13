@@ -30,7 +30,9 @@ const Header = ({ type }) => {
 	const onOptionChange = (name, operation) => setOptions(prev => ({
 		...prev,
 		[name]: 'i' === operation ? options[name] + 1 : options[name] - 1
-	}))
+	}));
+
+	console.log(options);
 
 	return <header className={`header ${'list' === type ? 'listHeader' : ''}`}>
 		<div className='container'>
@@ -83,7 +85,7 @@ const Header = ({ type }) => {
 							{`${format(dates[0].startDate, 'dd/MM/yy')} to ${format(dates[0].endDate, 'dd/MM/yy')}`}
 						</span>
 
-						{isOpenDates && <DateRange className='searchDates' ranges={dates} onChange={item => setDates([item.selection])} editableDateInputs={true} moveRangeOnFirstSelection={false} />}
+						{isOpenDates && <DateRange className='searchDates' ranges={dates} onChange={item => setDates([item.selection])} minDate={new Date()} editableDateInputs={true} moveRangeOnFirstSelection={false} />}
 					</div> {/* Search Dates */}
 
 					<div className='searchField'>
@@ -94,38 +96,11 @@ const Header = ({ type }) => {
 						</span>
 
 						{isOpenOptions && <div className='searchOptions'>
-							<div className='optItem'>
-								<span className='optText'>Adults</span>
-								<button className='optCounter' onClick={() => onOptionChange('adults', 'd')} disabled={options.adults <= 1}>
-									<FontAwesomeIcon className='searchIcon' icon={faSquareMinus} />
-								</button>
-								<span className='optCount'>{options.adults}</span>
-								<button className='optCounter' onClick={() => onOptionChange('adults', 'i')}>
-									<FontAwesomeIcon className='searchIcon' icon={faSquarePlus} />
-								</button>
-							</div>
+							<OptionItem label='Adults' value={options.adults} onIncrease={() => onOptionChange('adults', 'd')} onDecrease={() => onOptionChange('adults', 'i')} disabledAt={1} />
 
-							<div className='optItem'>
-								<span className='optText'>Children</span>
-								<button className='optCounter' onClick={() => onOptionChange('children', 'd')} disabled={options.children <= 0}>
-									<FontAwesomeIcon className='searchIcon' icon={faSquareMinus} />
-								</button>
-								<span className='optCount'>{options.children}</span>
-								<button className='optCounter' onClick={() => onOptionChange('children', 'i')}>
-									<FontAwesomeIcon className='searchIcon' icon={faSquarePlus} />
-								</button>
-							</div>
+							<OptionItem label='Children' value={options.children} onIncrease={() => onOptionChange('children', 'd')} onDecrease={() => onOptionChange('children', 'i')} disabledAt={0} />
 
-							<div className='optItem'>
-								<span className='optText'>Room</span>
-								<button className='optCounter' onClick={() => onOptionChange('room', 'd')} disabled={options.room <= 1}>
-									<FontAwesomeIcon className='searchIcon' icon={faSquareMinus} />
-								</button>
-								<span className='optCount'>{options.room}</span>
-								<button className='optCounter' onClick={() => onOptionChange('room', 'i')}>
-									<FontAwesomeIcon className='searchIcon' icon={faSquarePlus} />
-								</button>
-							</div>
+							<OptionItem label='Room' value={options.room} onIncrease={() => onOptionChange('room', 'd')} onDecrease={() => onOptionChange('room', 'i')} disabledAt={1} />
 						</div>}
 					</div> {/* Search Options */}
 
@@ -136,3 +111,19 @@ const Header = ({ type }) => {
 	</header>
 }
 export default Header;
+
+const OptionItem = ({ label, value, onIncrease, onDecrease, disabledAt }) => {
+	return <div className='optItem'>
+		<label className='optText'>{label}</label>
+
+		<button className='optCounter' onClick={onIncrease} disabled={value <= disabledAt}>
+			<FontAwesomeIcon className='searchIcon' icon={faSquareMinus} />
+		</button>
+
+		<span className='optCount'>{value}</span>
+
+		<button className='optCounter' onClick={onDecrease}>
+			<FontAwesomeIcon className='searchIcon' icon={faSquarePlus} />
+		</button>
+	</div>
+}

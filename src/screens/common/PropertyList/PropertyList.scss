@@ -1,0 +1,37 @@
+.propertyListSection {
+	padding: 25px;
+
+	h2 {
+		font-size: 20px;
+		margin-bottom: 20px;
+	}
+}
+
+.propertyList {
+	display: flex;
+	justify-content: space-between;
+	gap: 20px;
+
+	.property {
+		flex: 1;
+		overflow: hidden;
+		border-radius: 10px;
+		cursor: pointer;
+
+		img {
+			height: 150px;
+			object-fit: cover;
+		}
+
+		.propertyContent {
+			h3 {
+				font-size: 18px;
+			}
+
+			h4 {
+				font-size: 14px;
+				font-weight: 300;
+			}
+		}
+	}
+}

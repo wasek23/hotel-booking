@@ -1,0 +1,46 @@
+$primary1: #2f8f9d;
+$primary2: #3bacb6;
+$primary3: #82dbd8;
+$primary4: #b3e8e5;
+
+.mailListSection {
+	width: 100%;
+	max-width: 100%;
+	color: #fff;
+	background-color: $primary1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding: 50px;
+	margin-top: 25px;
+
+	.mailTitle {
+		font-size: 28px;
+		margin-bottom: 15px;
+	}
+
+	.mailDesc {
+		margin-bottom: 10px;
+	}
+
+	.mailInputContainer {
+		input {
+			width: 300px;
+			height: 50px;
+			padding: 10px;
+			border: none;
+			border-radius: 3px;
+			margin-right: 10px;
+
+			&:focus {
+				outline: 0;
+			}
+		}
+
+		button {
+			height: 50px;
+			padding: 10px 20px;
+		}
+	}
+}
