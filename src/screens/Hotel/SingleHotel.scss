@@ -1,0 +1,145 @@
+$primary1: #2f8f9d;
+$primary2: #3bacb6;
+$primary3: #82dbd8;
+$primary4: #b3e8e5;
+
+.hotelSection {
+	padding: 25px 0;
+
+	// Overview
+	.hotelOverview {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 25px;
+
+		.content {
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+		}
+
+		.title {
+			font-size: 24px;
+		}
+
+		.address {
+			font-size: 12px;
+			display: flex;
+			align-items: center;
+			gap: 10px;
+		}
+
+		.distance {
+			font-weight: 500;
+			color: $primary2;
+		}
+
+		.priceHighlight {
+			font-weight: 500;
+			color: #329542;
+		}
+
+		.bookNow {
+			height: fit-content;
+			margin-top: 10px;
+		}
+	}
+
+	// Images
+	.hotelImages {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: 10px;
+		margin-bottom: 20px;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			cursor: pointer;
+		}
+	}
+
+	// Details
+	.hotelDetails {
+		display: grid;
+		grid-template-columns: 3fr 1fr;
+		grid-gap: 20px;
+
+		.title {
+			font-size: 22px;
+			margin-bottom: 20px;
+		}
+
+		.description {
+			font-size: 14px;
+		}
+
+		.detailsPrice {
+			background-color: rgba($primary4, .5);
+			padding: 20px;
+			display: flex;
+			flex-direction: column;
+			gap: 20px;
+			border-radius: 3px;
+
+			h3 {
+				font-size: 18px;
+				color: #555;
+			}
+
+			span {
+				font-size: 14px;
+			}
+
+			.price {
+				font-size: 22px;
+				font-weight: 300;
+				color: #333;
+			}
+		}
+	}
+
+	// Image Slider
+	.hotelImageSlider {
+		width: 100vw;
+		height: 100vh;
+		background-color: rgba(0, 0, 0, 0.7);
+		position: fixed;
+		top: 0;
+		left: 0;
+		display: flex;
+		align-items: center;
+		z-index: 999;
+		transition: all .3s ease;
+
+		.imgFigure {
+			width: 100%;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			img {
+				width: 80%;
+				height: 80vh;
+			}
+		}
+
+		.close {
+			font-size: 25px;
+			color: $primary4;
+			position: absolute;
+			top: 20px;
+			right: 20px;
+			cursor: pointer;
+		}
+
+		.arrow {
+			font-size: 35px;
+			color: $primary4;
+			margin: 20px;
+			cursor: pointer;
+		}
+	}
+}

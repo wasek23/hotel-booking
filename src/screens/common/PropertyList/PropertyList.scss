@@ -7,11 +7,13 @@
 	}
 }
 
+// Property List
 .propertyList {
 	display: flex;
 	justify-content: space-between;
 	gap: 20px;
 
+	// Property
 	.property {
 		flex: 1;
 		overflow: hidden;

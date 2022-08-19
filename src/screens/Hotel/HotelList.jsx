@@ -26,59 +26,61 @@ const HotelList = () => {
 		<Navbar />
 		<Header type='list' />
 
-		<main className='hotelList'>
-			<div className='container'>
-				<div className='listSearch'>
-					<h2 className='title'>Search</h2>
+		<main>
+			<section className='hotelList'>
+				<div className='container'>
+					<div className='listSearch'>
+						<h2 className='title'>Search</h2>
 
-					<div className='searchField'>
-						<label htmlFor='destination'>Destination</label>
-						<input type='text' name='destination' id='destination' placeholder={destination} onChange={e => setDestination(e.target.value)} />
-					</div>
+						<div className='searchField'>
+							<label htmlFor='destination'>Destination</label>
+							<input type='text' name='destination' id='destination' placeholder={destination} onChange={e => setDestination(e.target.value)} />
+						</div> {/* Search Field */}
 
-					<div className='searchField'>
-						<label>Check-in Date</label>
-						<span onClick={() => setIsOpenDates(!isOpenDates)}>{`${format(dates[0].startDate, 'dd/MM/yy')} to ${format(dates[0].endDate, 'dd/MM/yy')}`}</span>
+						<div className='searchField'>
+							<label>Check-in Date</label>
+							<span onClick={() => setIsOpenDates(!isOpenDates)}>{`${format(dates[0].startDate, 'dd/MM/yy')} to ${format(dates[0].endDate, 'dd/MM/yy')}`}</span>
 
-						{isOpenDates && <DateRange className='searchDates' ranges={dates} onChange={item => setDates([item.selection])} minDate={new Date()} />}
-					</div>
+							{isOpenDates && <DateRange className='searchDates' ranges={dates} onChange={item => setDates([item.selection])} minDate={new Date()} />}
+						</div> {/* Search Field */}
 
-					<div className='searchField searchOptions'>
-						<label>Options</label>
+						<div className='searchField searchOptions'>
+							<label>Options</label>
 
-						<div className='optItem'>
-							<label className='optText'>Min Price <small>per night</small></label>
+							<div className='optItem'>
+								<label className='optText'>Min Price <small>per night</small></label>
 
-							<input className='optInput' type='number' />
-						</div>
+								<input className='optInput' type='number' />
+							</div>
 
-						<div className='optItem'>
-							<label className='optText'>Max Price <small>per night</small></label>
+							<div className='optItem'>
+								<label className='optText'>Max Price <small>per night</small></label>
 
-							<input className='optInput' type='number' />
-						</div>
+								<input className='optInput' type='number' />
+							</div>
 
-						<OptionItem label='Adults' value={options.adults} onIncrease={() => onOptionChange('adults', 'd')} onDecrease={() => onOptionChange('adults', 'i')} disabledAt={1} />
+							<OptionItem label='Adults' value={options.adults} onIncrease={() => onOptionChange('adults', 'd')} onDecrease={() => onOptionChange('adults', 'i')} disabledAt={1} />
 
-						<OptionItem label='Children' value={options.children} onIncrease={() => onOptionChange('children', 'd')} onDecrease={() => onOptionChange('children', 'i')} disabledAt={0} />
+							<OptionItem label='Children' value={options.children} onIncrease={() => onOptionChange('children', 'd')} onDecrease={() => onOptionChange('children', 'i')} disabledAt={0} />
 
-						<OptionItem label='Room' value={options.room} onIncrease={() => onOptionChange('room', 'd')} onDecrease={() => onOptionChange('room', 'i')} disabledAt={1} />
-					</div>
+							<OptionItem label='Room' value={options.room} onIncrease={() => onOptionChange('room', 'd')} onDecrease={() => onOptionChange('room', 'i')} disabledAt={1} />
+						</div> {/* Search Field */}
 
-					<button className='btnPrimary'>Search</button>
-				</div>
+						<button className='btnPrimary'>Search</button>
+					</div> {/* List Search */}
 
-				<div className='listResult'>
-					<SearchItem />
-					<SearchItem />
-					<SearchItem />
-					<SearchItem />
-					<SearchItem />
-					<SearchItem />
-					<SearchItem />
-					<SearchItem />
-				</div>
-			</div>
+					<div className='listResult'>
+						<SearchItem />
+						<SearchItem />
+						<SearchItem />
+						<SearchItem />
+						<SearchItem />
+						<SearchItem />
+						<SearchItem />
+						<SearchItem />
+					</div> {/* List Result */}
+				</div> {/* Container */}
+			</section>
 		</main>
 	</div>
 }

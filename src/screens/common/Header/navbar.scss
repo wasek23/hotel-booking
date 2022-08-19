@@ -13,6 +13,7 @@ $primary4: #b3e8e5;
 		justify-content: space-between;
 	}
 
+	// Logo
 	.logo {
 		height: 45px;
 
@@ -23,7 +24,9 @@ $primary4: #b3e8e5;
 		}
 	}
 
-	.loginBtn {
-		margin-left: 20px;
+	.buttons {
+		display: flex;
+		align-items: center;
+		gap: 20px;
 	}
 }

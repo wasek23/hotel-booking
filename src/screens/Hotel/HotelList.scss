@@ -9,6 +9,7 @@ $primary1: #2f8f9d;
 		grid-gap: 20px;
 	}
 
+	// List Search
 	.listSearch {
 		height: fit-content;
 		background-color: #fff9ca;
@@ -29,6 +30,7 @@ $primary1: #2f8f9d;
 		}
 	}
 
+	// Search Field
 	.searchField {
 		display: flex;
 		flex-direction: column;
@@ -65,6 +67,7 @@ $primary1: #2f8f9d;
 		}
 	}
 
+	// Search Options
 	.searchOptions {
 		.optItem {
 			display: flex;

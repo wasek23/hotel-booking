@@ -12,7 +12,7 @@ const Featured = () => {
 					<h3>Dublin</h3>
 					<h4>123 properties</h4>
 				</div>
-			</div>
+			</div> {/* Feature Item */}
 
 			<div className='featuredItem'>
 				<img
@@ -23,7 +23,8 @@ const Featured = () => {
 					<h3>Reno</h3>
 					<h4>533 properties</h4>
 				</div>
-			</div>
+			</div> {/* Feature Item */}
+
 			<div className='featuredItem'>
 				<img
 					src='https://cf.bstatic.com/xdata/images/city/max500/689422.webp?k=2595c93e7e067b9ba95f90713f80ba6e5fa88a66e6e55600bd27a5128808fdf2&o='
@@ -33,8 +34,8 @@ const Featured = () => {
 					<h3>Austin</h3>
 					<h4>532 properties</h4>
 				</div>
-			</div>
-		</div>
+			</div> {/* Feature Item */}
+		</div> {/* Container */}
 	</section>
 }
 export default Featured;

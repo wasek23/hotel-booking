@@ -12,7 +12,7 @@ const SearchItem = () => {
 			<span className='features'>Entire studio • 1 bathroom • 21m² 1 full bed</span>
 			<span className='cancelOpt'>Free cancellation</span>
 			<span className='cancelOptSubtitle'>You can cancel later, so lock in this great price today!</span>
-		</div>
+		</div> {/* Description */}
 
 		<div className='details'>
 			<div className='rating'>
@@ -25,7 +25,7 @@ const SearchItem = () => {
 				<span className='taxOpt'>Includes taxes and fees</span>
 				<button className='btnPrimary checkButton'>See availability</button>
 			</div>
-		</div>
+		</div> {/* Details */}
 	</div>
 }
 export default SearchItem;
